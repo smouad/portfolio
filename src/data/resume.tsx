@@ -49,7 +49,10 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    // Blog is wired up and ready — add .mdx files to content/ and re-enable this.
+    // Worth doing: a writeup of Brainfast's multi-tenant RAG architecture is the
+    // kind of thing that proves depth to a hiring manager faster than a repo link.
+    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "sodormouad@gmail.com",
