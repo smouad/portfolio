@@ -1,47 +1,40 @@
-<div align="center">
-<img alt="Portfolio" src="https://github.com/dillionverma/portfolio/assets/16860528/57ffca81-3f0a-4425-b31d-094f61725455" width="90%">
-</div>
+# Mouad Sodor — Portfolio
 
-# Portfolio [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdillionverma%2Fportfolio)
+My personal portfolio: full-stack and AI engineering work, built with Next.js 16, React 19, TypeScript, Tailwind CSS, shadcn/ui and Magic UI.
 
-Built with next.js, [shadcn/ui](https://ui.shadcn.com/), and [magic ui](https://magicui.design/), deployed on Vercel.
+**Live:** _deploying_
 
-# Features
+## What's in here
 
-- Setup only takes a few minutes by editing the [single config file](./src/data/resume.tsx)
-- Built using Next.js 14, React, Typescript, Shadcn/UI, TailwindCSS, Framer Motion, Magic UI
-- Includes a blog
-- Responsive for different devices
-- Optimized for Next.js and Vercel
+- **Work** — EvaGrupo (multi-tenant insurance/fintech ERP), Motkan Labs (Brainfast), Clipaf (AI video), freelance
+- **Projects** — Brainfast, Resonance, Clipaf, EvaGrupo ERP, RefCase, Motkan
+- **Also built** — browser extensions, AI tools, and low-level systems work in C from 1337 / 42 Network
 
-# Getting Started Locally
+All content lives in a single config file: [`src/data/resume.tsx`](./src/data/resume.tsx).
 
-1. Clone this repository to your local machine:
+## Running locally
 
-   ```bash
-   git clone https://github.com/dillionverma/portfolio
-   ```
+```bash
+pnpm install
+pnpm dev
+```
 
-2. Move to the cloned directory
+Then open http://localhost:3000.
 
-   ```bash
-   cd portfolio
-   ```
+## Stack
 
-3. Install dependencies:
+| | |
+|---|---|
+| Framework | Next.js 16 (App Router, Turbopack) |
+| UI | React 19, Tailwind CSS v4, shadcn/ui, Magic UI |
+| Content | Content Collections + MDX (blog) |
+| Animation | Motion |
+| Deployment | Vercel |
 
-   ```bash
-   pnpm install
-   ```
+## Credits
 
-4. Start the local Server:
+Built on the [Magic UI portfolio template](https://github.com/magicuidesign/portfolio) by [Dillion Verma](https://github.com/dillionverma), MIT licensed. Layout and components are the template's; content, copy, and structural changes are mine.
 
-   ```bash
-   pnpm dev
-   ```
+## License
 
-5. Open the [Config file](./src/data/resume.tsx) and make changes
-
-# License
-
-Licensed under the [MIT license](https://github.com/dillionverma/portfolio/blob/main/LICENSE.md).
+[MIT](./LICENSE)

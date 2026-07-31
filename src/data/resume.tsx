@@ -1,699 +1,413 @@
 import { Icons } from "@/components/icons";
-import { HomeIcon, NotebookIcon } from "lucide-react";
+import {
+  HomeIcon,
+  NotebookIcon,
+  Sparkles,
+  Bot,
+  Network,
+  MessageSquareCode,
+  Triangle,
+} from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
 import { Typescript } from "@/components/ui/svgs/typescript";
 import { Nodejs } from "@/components/ui/svgs/nodejs";
 import { Python } from "@/components/ui/svgs/python";
-import { Golang } from "@/components/ui/svgs/golang";
 import { Postgresql } from "@/components/ui/svgs/postgresql";
 import { Docker } from "@/components/ui/svgs/docker";
-import { Kubernetes } from "@/components/ui/svgs/kubernetes";
-import { Java } from "@/components/ui/svgs/java";
-import { Csharp } from "@/components/ui/svgs/csharp";
+import { Django } from "@/components/ui/svgs/django";
 
 export const DATA = {
-  name: "Dillion Verma",
-  initials: "DV",
-  url: "https://dillion.io",
-  location: "San Francisco, CA",
-  locationLink: "https://www.google.com/maps/place/sanfrancisco",
+  name: "Mouad Sodor",
+  initials: "MS",
+  url: "https://smouad.dev", // TODO: buy a domain — smouad.dev / mouadsodor.com
+  location: "Tetouan, Morocco",
+  locationLink: "https://www.google.com/maps/place/tetouan",
   description:
-    "Software Engineer turned Entrepreneur. I love building things and helping people. Very active on Twitter.",
+    "Full-stack & AI engineer. I build multi-tenant SaaS platforms, AI agents, and video automation systems. Open to relocation.",
   summary:
-    "At the end of 2022, I quit my job as a software engineer to go fulltime into building and scaling my own SaaS businesses. In the past, [I pursued a double degree in computer science and business](/#education), [interned at big tech companies in Silicon Valley](https://www.youtube.com/watch?v=d-LJ2e5qKdE), and [competed in over 21 hackathons for fun](/#hackathons). I also had the pleasure of being a part of the first ever in-person cohort of buildspace called [buildspace sf1](https://buildspace.so/sf1).",
-  avatarUrl: "/me.png",
+    "I build production software end to end — multi-tenant SaaS backends, AI agent platforms with vector search, video generation pipelines, and Manifest V3 browser extensions. Most of my work lives in the messy middle: queue architectures that survive retries, org-scoped permission models, and AI integrations that stay cheap at scale. I currently build insurance and fintech systems at [EvaGrupo](#work), and ship AI products under [Motkan Labs](#work) and [Clipaf](#work). I'm self-taught through the [1337 / 42 Network](#education) peer-learning program, and I'm actively looking for engineering roles in Europe with visa sponsorship.",
+  // TODO: drop your own photo at public/me.png and set this back to "/me.png".
+  // Empty for now so the page falls back to your "MS" initials — the template
+  // shipped with a photo of its author, which obviously can't sit under your name.
+  avatarUrl: "",
   skills: [
+    { name: "TypeScript", icon: Typescript },
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
-    { name: "Typescript", icon: Typescript },
     { name: "Node.js", icon: Nodejs },
     { name: "Python", icon: Python },
-    { name: "Go", icon: Golang },
-    { name: "Postgres", icon: Postgresql },
+    { name: "Django", icon: Django }, // original EvaGrupo ERP backend
+    { name: "PostgreSQL", icon: Postgresql },
     { name: "Docker", icon: Docker },
-    { name: "Kubernetes", icon: Kubernetes },
-    { name: "Java", icon: Java },
-    { name: "C++", icon: Csharp },
+    // AI — each of these is backed by shipped work, not tutorials:
+    { name: "Google Gemini", icon: Sparkles }, // Dia, Video Maker, Dan.ai, Brainfast voice
+    { name: "OpenAI", icon: Bot }, // embeddings pipeline in Brainfast
+    { name: "Qdrant / RAG", icon: Network }, // per-tenant vector collections, semantic search
+    { name: "AI SDK", icon: Triangle }, // streaming + tool calls across 100+ models in Dan.ai
+    { name: "Prompt Engineering", icon: MessageSquareCode }, // system prompts, personas, cheap-classifier routing
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
-    email: "hello@example.com",
-    tel: "+123456789",
+    email: "sodormouad@gmail.com",
+    tel: "", // TODO: add your phone number, or leave blank to hide
     social: {
       GitHub: {
         name: "GitHub",
-        url: "https://dub.sh/dillion-github",
+        url: "https://github.com/smouad",
         icon: Icons.github,
         navbar: true,
       },
-
       LinkedIn: {
         name: "LinkedIn",
-        url: "https://dub.sh/dillion-linkedin",
+        url: "https://ma.linkedin.com/in/mouad-sodor",
         icon: Icons.linkedin,
-
-        navbar: true,
-      },
-      X: {
-        name: "X",
-        url: "https://dub.sh/dillion-twitter",
-        icon: Icons.x,
-
-        navbar: true,
-      },
-      Youtube: {
-        name: "Youtube",
-        url: "https://dub.sh/dillion-youtube",
-        icon: Icons.youtube,
         navbar: true,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:sodormouad@gmail.com",
         icon: Icons.email,
-
         navbar: false,
       },
     },
   },
 
+  // TODO: I don't know your real titles or start/end dates — fix the ones marked ??
   work: [
     {
-      company: "Atomic Finance",
-      href: "https://atomic.finance",
+      company: "EvaGrupo",
+      href: "https://github.com/evagrupo",
+      badges: ["Current"],
+      location: "Remote",
+      title: "Full-Stack Developer", // ?? confirm title
+      logoUrl: "",
+      start: "2024", // ?? confirm
+      end: "Present",
+      // ?? Did you build the original Django version, or inherit it? Did you lead the
+      // migration? "Migrated a production Django ERP to Next.js/Node" is a senior-level
+      // line — tell me which is true and I'll sharpen this.
+      description:
+        "Build and maintain a multi-tenant ERP for insurance and fintech operations, originally built on Python/Django and since evolved onto a Next.js and Node/PostgreSQL stack. Shipped per-product partner ownership, multi-supervisor CRM assignment, scheduled-call workflows, and a product image pipeline. Also maintain seven branded sub-apps sharing one design system and API layer.",
+    },
+    {
+      company: "Motkan Labs",
+      href: "https://github.com/Motkan-labs",
       badges: [],
       location: "Remote",
-      title: "Bitcoin Protocol Engineer",
-      logoUrl: "/atomic.png",
-      start: "May 2021",
-      end: "Oct 2022",
+      title: "Founding Engineer", // ?? is this your own company, or a client?
+      logoUrl: "",
+      start: "2025", // ?? confirm
+      end: "Present",
       description:
-        "Implemented the Bitcoin discreet log contract (DLC) protocol specifications as an open source Typescript SDK. Dockerized all microservices and setup production kubernetes cluster. Architected a data lake using AWS S3 and Athena for historical backtesting of bitcoin trading strategies. Built a mobile app using react native and typescript.",
+        "Built Brainfast, a multi-tenant AI chatbot platform: Bun + Hono API, BullMQ workers, Drizzle/PostgreSQL, and Qdrant vector search for per-tenant knowledge bases. Added Gemini Live voice calls, Stripe usage-based billing, an embeddable Shadow-DOM widget, and Discord/Slack/WhatsApp integrations. Also built the multi-domain Motkan marketing site serving three brands from a single Next.js app.",
     },
     {
-      company: "Shopify",
+      company: "Clipaf",
+      href: "https://github.com/clipaf",
       badges: [],
-      href: "https://shopify.com",
       location: "Remote",
-      title: "Software Engineer",
-      logoUrl: "/shopify.svg",
-      start: "January 2021",
-      end: "April 2021",
+      title: "Full-Stack Developer", // ?? confirm
+      logoUrl: "",
+      start: "2025", // ?? confirm
+      end: "Present",
       description:
-        "Implemented a custom Kubernetes controller in Go to automate the deployment of MySQL and ProxySQL custom resources in order to enable 2,000+ internal developers to instantly deploy their app databases to production. Wrote several scripts in Go to automate MySQL database failovers while maintaining master-slave replication topologies and keeping Zookeeper nodes consistent with changes.",
+        "Built an AI video creation platform taking a story prompt through script, narration, imagery, and render. Designed the AI Queue microservice — a Hono + BullMQ job system with a typed client SDK, webhook callbacks, and exponential-backoff retries — that fans speech and image generation out across horizontally scaled workers.",
     },
     {
-      company: "Nvidia",
-      href: "https://nvidia.com/",
+      company: "Freelance",
+      href: "https://github.com/smouad",
       badges: [],
-      location: "Santa Clara, CA",
-      title: "Software Engineer",
-      logoUrl: "/nvidia.png",
-      start: "January 2020",
-      end: "April 2020",
+      location: "Remote",
+      title: "Full-Stack Developer",
+      logoUrl: "",
+      start: "2024", // ?? confirm
+      end: "Present",
       description:
-        "Architected and wrote the entire MVP of the GeForce Now Cloud Gaming internal admin and A/B testing dashboard using React, Redux, TypeScript, and Python.",
-    },
-    {
-      company: "Splunk",
-      href: "https://splunk.com",
-      badges: [],
-      location: "San Jose, CA",
-      title: "Software Engineer",
-      logoUrl: "/splunk.svg",
-      start: "January 2019",
-      end: "April 2019",
-      description:
-        "Co-developed a prototype iOS app with another intern in Swift for the new Splunk Phantom security orchestration product (later publicly demoed and launched at .conf annual conference in Las Vegas). Implemented a realtime service for the iOS app in Django (Python) and C++; serialized data using protobufs transmitted over gRPC resulting in an approximate 500% increase in data throughput.",
-    },
-    {
-      company: "Lime",
-      href: "https://li.me/",
-      badges: [],
-      location: "San Francisco, CA",
-      title: "Software Engineer",
-      logoUrl: "/lime.svg",
-      start: "January 2018",
-      end: "April 2018",
-      description:
-        "Proposed and implemented an internal ruby API for sending/receiving commands to scooters over LTE networks. Developed a fully automated bike firmware update system to handle asynchronous firmware updates of over 100,000+ scooters worldwide, and provide progress reports in real-time using React, Ruby on Rails, PostgreSQL and AWS EC2 saving hundreds of developer hours.",
-    },
-    {
-      company: "Mitre Media",
-      href: "https://mitremedia.com/",
-      badges: [],
-      location: "Toronto, ON",
-      title: "Software Engineer",
-      logoUrl: "/mitremedia.png",
-      start: "May 2017",
-      end: "August 2017",
-      description:
-        "Designed and implemented a robust password encryption and browser cookie storage system in Ruby on Rails. Leveraged the Yahoo finance API to develop the dividend.com equity screener",
+        "Delivered eight client projects: RefCase (sales reference-matching Chrome extension + Next.js backend with org-level RBAC), TOAD (real-time SEO auditor extension), Dia (Gemini-powered jewelry design assistant), Dan.ai (chat interface routing 100+ models), a TCF Canada learning platform, and an Instagram sync tool.",
     },
   ],
+
+  // TODO: confirm years. Remove this section entirely if you'd rather not show it.
   education: [
     {
-      school: "Buildspace",
-      href: "https://buildspace.so",
-      degree: "s3, s4, sf1, s5",
-      logoUrl: "/buildspace.jpg",
-      start: "2023",
-      end: "2024",
+      school: "1337 School (42 Network)",
+      href: "https://1337.ma",
+      degree: "Software Engineering — peer-to-peer, project-based program",
+      logoUrl: "",
+      start: "2022", // ?? confirm
+      end: "2024", // ?? confirm
     },
     {
-      school: "University of Waterloo",
-      href: "https://uwaterloo.ca",
-      degree: "Bachelor's Degree of Computer Science (BCS)",
-      logoUrl: "/waterloo.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "Wilfrid Laurier University",
-      href: "https://wlu.ca",
-      degree: "Bachelor's Degree of Business Administration (BBA)",
-      logoUrl: "/laurier.png",
-      start: "2016",
-      end: "2021",
-    },
-    {
-      school: "International Baccalaureate",
-      href: "https://ibo.org",
-      degree: "IB Diploma",
-      logoUrl: "/ib.png",
-      start: "2012",
-      end: "2016",
+      school: "ALX Africa",
+      href: "https://www.alxafrica.com",
+      degree: "Software Engineering Program",
+      logoUrl: "",
+      start: "2023", // ?? confirm
+      end: "2024", // ?? confirm
     },
   ],
+
   projects: [
     {
-      title: "Chat Collect",
-      href: "https://chatcollect.com",
-      dates: "Jan 2024 - Feb 2024",
+      title: "Brainfast",
+      href: "https://github.com/Motkan-labs/brainfast",
+      dates: "2025 - Present",
       active: true,
       description:
-        "With the release of the [OpenAI GPT Store](https://openai.com/blog/introducing-the-gpt-store), I decided to build a SaaS which allows users to collect email addresses from their GPT users. This is a great way to build an audience and monetize your GPT API usage.",
+        "Multi-tenant AI chatbot platform. Organizations upload documents and URLs, which a BullMQ pipeline extracts, embeds, and stores in per-tenant Qdrant collections for semantic search. Includes agent builder, Gemini Live voice calls, Stripe usage metering, and an embeddable Shadow-DOM widget.",
       technologies: [
-        "Next.js",
-        "Typescript",
+        "Bun",
+        "Hono",
+        "TypeScript",
+        "React 19",
+        "Drizzle ORM",
         "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
+        "Qdrant",
+        "BullMQ",
+        "Redis",
         "Stripe",
-        "Shadcn UI",
-        "Magic UI",
       ],
       links: [
-        {
-          type: "Website",
-          href: "https://chatcollect.com",
-          icon: <Icons.globe className="size-3" />,
-        },
-      ],
-      image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/chat-collect.mp4",
-    },
-    {
-      title: "Magic UI",
-      href: "https://magicui.design",
-      dates: "June 2023 - Present",
-      active: true,
-      description:
-        "Designed, developed and sold animated UI components for developers.",
-      technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Stripe",
-        "Shadcn UI",
-        "Magic UI",
-      ],
-      links: [
-        {
-          type: "Website",
-          href: "https://magicui.design",
-          icon: <Icons.globe className="size-3" />,
-        },
         {
           type: "Source",
-          href: "https://github.com/magicuidesign/magicui",
+          href: "https://github.com/Motkan-labs/brainfast",
           icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video: "https://cdn.magicui.design/bento-grid.mp4",
+      video: "",
     },
     {
-      title: "llm.report",
-      href: "https://llm.report",
-      dates: "April 2023 - September 2023",
+      title: "Resonance",
+      href: "https://github.com/smouad",
+      dates: "2025",
       active: true,
       description:
-        "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
+        "Open-source alternative to ElevenLabs: AI text-to-speech with zero-shot voice cloning powered by Chatterbox TTS running on serverless GPUs. Includes credit-based billing and a full generation history.",
       technologies: [
-        "Next.js",
-        "Typescript",
-        "PostgreSQL",
+        "Next.js 16",
+        "React 19",
         "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
+        "PostgreSQL",
+        "Clerk",
+        "Modal GPU",
+        "Polar",
       ],
       links: [
-        {
-          type: "Website",
-          href: "https://llm.report",
-          icon: <Icons.globe className="size-3" />,
-        },
+        // TODO: add the real repo URL — I couldn't find Resonance on @smouad
         {
           type: "Source",
-          href: "https://github.com/dillionverma/llm.report",
+          href: "https://github.com/smouad",
           icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video: "https://cdn.llm.report/openai-demo.mp4",
+      video: "",
     },
     {
-      title: "Automatic Chat",
-      href: "https://automatic.chat",
-      dates: "April 2023 - March 2024",
+      title: "Clipaf — AI Video Platform",
+      href: "https://github.com/clipaf",
+      dates: "2025 - Present",
       active: true,
       description:
-        "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
+        "End-to-end AI video creation: a story prompt becomes a script, narration, generated imagery, and a rendered short-form video. Backed by the AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and retry handling across horizontally scaled workers.",
       technologies: [
         "Next.js",
-        "Typescript",
-        "PostgreSQL",
-        "Prisma",
-        "TailwindCSS",
-        "Shadcn UI",
-        "Magic UI",
-        "Stripe",
-        "Cloudflare Workers",
+        "React",
+        "Hono",
+        "BullMQ",
+        "Redis",
+        "Remotion",
+        "TypeScript",
+        "Docker",
       ],
       links: [
         {
-          type: "Website",
-          href: "https://automatic.chat",
-          icon: <Icons.globe className="size-3" />,
+          type: "Source",
+          href: "https://github.com/clipaf",
+          icon: <Icons.github className="size-3" />,
         },
       ],
       image: "",
-      video:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
+      video: "",
+    },
+    {
+      title: "EvaGrupo ERP",
+      href: "https://github.com/evagrupo",
+      dates: "2024 - Present",
+      active: true,
+      description:
+        "Multi-tenant ERP for insurance and fintech operations: CRM with lead scheduling and multi-supervisor assignment, per-product partner ownership, product catalog with image pipeline, and seven branded sub-apps sharing one backend and design system. Started life as a Python/Django application before moving to a Next.js and Node stack.",
+      technologies: [
+        "Python",
+        "Django",
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "Docker",
+      ],
+      links: [
+        {
+          type: "Organization",
+          href: "https://github.com/evagrupo",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "RefCase",
+      href: "https://github.com/smouad",
+      dates: "2025",
+      active: true,
+      description:
+        "Chrome extension and Next.js backend that helps sales teams find the right customer reference case. CSV ingestion with merge-or-replace, dynamic faceted filters, AI-powered case matching, and organization-level RBAC with bearer-token auth for the extension.",
+      technologies: [
+        "Plasmo",
+        "React 19",
+        "TypeScript",
+        "Next.js 16",
+        "Drizzle ORM",
+        "PostgreSQL",
+        "Better Auth",
+        "Zustand",
+      ],
+      links: [],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Motkan — Multi-Domain Site",
+      href: "https://motkan.com",
+      dates: "2025 - Present",
+      active: true,
+      description:
+        "One Next.js application serving three distinct domains with separate branding, content, and landing pages — resolved by host-based routing at the edge rather than three separate deployments.",
+      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/smouad/motkan-site",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
     },
   ],
+
+  // Repurposed: this renders as the "Also built" timeline at the bottom of the page.
   hackathons: [
     {
-      title: "Hack Western 5",
-      dates: "November 23rd - 25th, 2018",
-      location: "London, Ontario",
+      title: "TOAD — SEO Auditor Extension",
+      dates: "2025",
+      location: "Chrome Extension · Plasmo, React 19, TypeScript",
       description:
-        "Developed a mobile application which delivered bedtime stories to children using augmented reality.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-western.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+        "Real-time on-page SEO audit: heading hierarchy, meta and Open Graph tags, JSON-LD schema validation, and image/link checks, with a health score and social preview. A full typed rewrite of a legacy vanilla-JS extension.",
+      image: "",
       links: [],
     },
     {
-      title: "Hack The North",
-      dates: "September 14th - 16th, 2018",
-      location: "Waterloo, Ontario",
+      title: "Dia — Jewelry Design Assistant",
+      dates: "2025",
+      location: "Next.js · Google Gemini",
       description:
-        "Developed a mobile application which delivers university campus wide events in real time to all students.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2019/mlh-trust-badge-2019-white.svg",
+        "Email-gated engagement-ring designer. Customers describe a piece, Gemini generates design options, and the result is handed off to the jeweler as a structured order.",
+      image: "",
       links: [],
     },
     {
-      title: "FirstNet Public Safety Hackathon",
-      dates: "March 23rd - 24th, 2018",
-      location: "San Francisco, California",
+      title: "Dan.ai — Multi-Model Chat",
+      dates: "2025",
+      location: "Next.js 15 · Vercel AI SDK",
       description:
-        "Developed a mobile application which communcicates a victims medical data from inside an ambulance to doctors at hospital.",
-      icon: "public",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/firstnet.png",
+        "Chat interface routing across 100+ models from Anthropic, OpenAI, Google, Meta, and Mistral, with streaming responses, reasoning display, source citations, file attachments, and per-token cost tracking.",
+      image: "",
       links: [],
     },
     {
-      title: "DeveloperWeek Hackathon",
-      dates: "February 3rd - 4th, 2018",
-      location: "San Francisco, California",
+      title: "The Buzz — Booking Platform",
+      dates: "2025",
+      location: "Next.js · Drizzle · Neon PostgreSQL",
       description:
-        "Developed a web application which aggregates social media data regarding cryptocurrencies and predicts future prices.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/developer-week.jpg",
-      links: [
-        {
-          title: "Github",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/cryptotrends/cryptotrends",
-        },
-      ],
-    },
-    {
-      title: "HackDavis",
-      dates: "January 20th - 21st, 2018",
-      location: "Davis, California",
-      description:
-        "Developed a mobile application which allocates a daily carbon emission allowance to users to move towards a sustainable environment.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-davis.png",
-      win: "Best Data Hack",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2018/white.svg",
-      links: [
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/my6footprint",
-        },
-        {
-          title: "ML",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/my6footprint-machine-learning",
-        },
-        {
-          title: "iOS",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/CarbonWallet",
-        },
-        {
-          title: "Server",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/Wallet6/wallet6-server",
-        },
-      ],
-    },
-    {
-      title: "ETH Waterloo",
-      dates: "October 13th - 15th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a blockchain application for doctors and pharmacists to perform trustless transactions and prevent overdosage in patients.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/eth-waterloo.png",
-      links: [
-        {
-          title: "Organization",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/ethdocnet",
-        },
-      ],
-    },
-    {
-      title: "Hack The North",
-      dates: "September 15th - 17th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a virtual reality application allowing users to see themselves in third person.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-north.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Streamer Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/justinmichaud/htn2017",
-        },
-        {
-          title: "Client Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/RTSPClient",
-        },
-      ],
-    },
-    {
-      title: "Hack The 6ix",
-      dates: "August 26th - 27th, 2017",
-      location: "Toronto, Ontario",
-      description:
-        "Developed an open platform for people shipping items to same place to combine shipping costs and save money.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-the-6ix.jpg",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/ShareShip/ShareShip",
-        },
-        {
-          title: "Site",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://share-ship.herokuapp.com/",
-        },
-      ],
-    },
-    {
-      title: "Stupid Hack Toronto",
-      dates: "July 23rd, 2017",
-      location: "Toronto, Ontario",
-      description:
-        "Developed a chrome extension which tracks which facebook profiles you have visited and immediately texts your girlfriend if you visited another girls page.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/stupid-hackathon.png",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/nsagirlfriend/nsagirlfriend",
-        },
-      ],
-    },
-    {
-      title: "Global AI Hackathon - Toronto",
-      dates: "June 23rd - 25th, 2017",
-      location: "Toronto, Ontario",
-      description:
-        "Developed a python library which can be imported to any python game and change difficulty of the game based on real time emotion of player. Uses OpenCV and webcam for facial recognition, and a custom Machine Learning Model trained on a [Kaggle Emotion Dataset](https://www.kaggle.com/c/challenges-in-representation-learning-facial-expression-recognition-challenge/leaderboard) using [Tensorflow](https://www.tensorflow.org/Tensorflow) and [Keras](https://keras.io/). This project recieved 1st place prize at the Global AI Hackathon - Toronto and was also invited to demo at [NextAI Canada](https://www.nextcanada.com/next-ai).",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/global-ai-hackathon.jpg",
-      win: "1st Place Winner",
-      links: [
-        {
-          title: "Article",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://syncedreview.com/2017/06/26/global-ai-hackathon-in-toronto/",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/TinySamosas/",
-        },
-      ],
-    },
-    {
-      title: "McGill AI for Social Innovation Hackathon",
-      dates: "June 17th - 18th, 2017",
-      location: "Montreal, Quebec",
-      description:
-        "Developed realtime facial microexpression analyzer using AI",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/ai-for-social-good.jpg",
+        "Two independent frontend designs sharing a single backend and database, letting the client A/B an entire product experience without forking the API.",
+      image: "",
       links: [],
     },
     {
-      title: "Open Source Circular Economy Days Hackathon",
-      dates: "June 10th, 2017",
-      location: "Toronto, Ontario",
+      title: "Video Maker — AI Story Generator",
+      dates: "2025",
+      location: "Python · Streamlit · Google Gemini",
       description:
-        "Developed a custom admin interface for food waste startup <a href='http://genecis.co/'>Genecis</a> to manage their data and provide analytics.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/open-source-circular-economy-days.jpg",
-      win: "1st Place Winner",
-      links: [
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/genecis",
-        },
-      ],
-    },
-    {
-      title: "Make School's Student App Competition 2017",
-      dates: "May 19th - 21st, 2017",
-      location: "International",
-      description: "Improved PocketDoc and submitted to online competition",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/make-school-hackathon.png",
-      win: "Top 10 Finalist | Honourable Mention",
-      links: [
-        {
-          title: "Medium Article",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://medium.com/make-school/the-winners-of-make-schools-student-app-competition-2017-a6b0e72f190a",
-        },
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/pocketdoc-react-native",
-        },
-        {
-          title: "YouTube",
-          icon: <Icons.youtube className="h-4 w-4" />,
-          href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
-        },
-      ],
-    },
-    {
-      title: "HackMining",
-      dates: "May 12th - 14th, 2017",
-      location: "Toronto, Ontario",
-      description: "Developed neural network to optimize a mining process",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/hack-mining.png",
+        "Generates long-form calming and bedtime-story videos: AI concept, sectioned script, per-section TTS, and per-scene generated imagery, with audio and images produced in parallel under API rate limits.",
+      image: "",
       links: [],
     },
     {
-      title: "Waterloo Equithon",
-      dates: "May 5th - 7th, 2017",
-      location: "Waterloo, Ontario",
+      title: "ft_transcendence",
+      dates: "2024",
+      location: "1337 / 42 Network · Team project",
       description:
-        "Developed Pocketdoc, an app in which you take a picture of a physical wound, and the app returns common solutions or cures to the injuries or diseases.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/waterloo-equithon.png",
-      links: [
-        {
-          title: "Devpost",
-          icon: <Icons.globe className="h-4 w-4" />,
-          href: "https://devpost.com/software/pocketdoc-react-native",
-        },
-        {
-          title: "YouTube",
-          icon: <Icons.youtube className="h-4 w-4" />,
-          href: "https://www.youtube.com/watch?v=XwFdn5Rmx68",
-        },
-        {
-          title: "Source",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/pocketdoc-react-native",
-        },
-      ],
-    },
-    {
-      title: "SpaceApps Waterloo",
-      dates: "April 28th - 30th, 2017",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed Earthwatch, a web application which allows users in a plane to virtually see important points of interest about the world below them. They can even choose to fly away from their route and then fly back if they choose. Special thanks to CesiumJS for providing open source world and plane models.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/space-apps.png",
+        "Real-time multiplayer Pong platform with matchmaking, live chat, OAuth, and tournaments — built as a team across a full-stack codebase.",
+      image: "",
       links: [
         {
           title: "Source",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/earthwatch",
+          href: "https://github.com/42-teamprojects/ft_transcendence",
         },
       ],
     },
     {
-      title: "MHacks 9",
-      dates: "March 24th - 26th, 2017",
-      location: "Ann Arbor, Michigan",
+      title: "minishell",
+      dates: "2023",
+      location: "1337 / 42 Network · C",
       description:
-        "Developed Super Graphic Air Traffic, a VR website made to introduce people to the world of air traffic controlling. This project was built completely using THREE.js as well as a node backend server.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/mhacks-9.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
+        "A Unix shell in C: lexer and parser, pipelines, redirections, environment expansion, signal handling, and built-ins — no external parsing libraries.",
+      image: "",
       links: [
         {
           title: "Source",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/threejs-planes",
+          href: "https://github.com/smouad/minishell",
         },
       ],
     },
     {
-      title: "StartHacks I",
-      dates: "March 4th - 5th, 2017",
-      location: "Waterloo, Ontario",
+      title: "cub3D",
+      dates: "2023",
+      location: "1337 / 42 Network · C",
       description:
-        "Developed at StartHacks 2017, Recipic is a mobile app which allows you to take pictures of ingredients around your house, and it will recognize those ingredients using ClarifAI image recognition API and return possible recipes to make. Recipic recieved 1st place at the hackathon for best pitch and hack.",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/starthacks.png",
-      win: "1st Place Winner",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source (Mobile)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/recipic-ionic",
-        },
-        {
-          title: "Source (Server)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/recipic-rails",
-        },
-      ],
-    },
-    {
-      title: "QHacks II",
-      dates: "February 3rd - 5th, 2017",
-      location: "Kingston, Ontario",
-      description:
-        "Developed a mobile game which enables city-wide manhunt with random lobbies",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/qhacks.png",
-      mlh: "https://s3.amazonaws.com/logged-assets/trust-badge/2017/white.svg",
-      links: [
-        {
-          title: "Source (Mobile)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/dillionverma/human-huntr-react-native",
-        },
-        {
-          title: "Source (API)",
-          icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/mattBlackDesign/human-huntr-rails",
-        },
-      ],
-    },
-    {
-      title: "Terrible Hacks V",
-      dates: "November 26th, 2016",
-      location: "Waterloo, Ontario",
-      description:
-        "Developed a mock of Windows 11 with interesting notifications and functionality",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/terrible-hacks-v.png",
+        "A raycasting engine in C rendering a textured first-person maze from a 2D map, written from scratch against a minimal graphics library.",
+      image: "",
       links: [
         {
           title: "Source",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/justinmichaud/TerribleHacks2016-Windows11",
+          href: "https://github.com/smouad/cub3d",
         },
       ],
     },
     {
-      title: "Portal Hackathon",
-      dates: "October 29, 2016",
-      location: "Kingston, Ontario",
+      title: "Inception",
+      dates: "2024",
+      location: "1337 / 42 Network · Docker",
       description:
-        "Developed an internal widget for uploading assignments using Waterloo's portal app",
-      image:
-        "https://pub-83c5db439b40468498f97946200806f7.r2.dev/hackline/portal-hackathon.png",
+        "A multi-service infrastructure built from scratch with Docker Compose: NGINX with TLS, WordPress via PHP-FPM, and MariaDB, each in its own container with persistent volumes and an isolated network.",
+      image: "",
       links: [
         {
           title: "Source",
           icon: <Icons.github className="h-4 w-4" />,
-          href: "https://github.com/UWPortalSDK/crowmark",
+          href: "https://github.com/smouad/inception",
         },
       ],
     },
