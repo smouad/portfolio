@@ -20,7 +20,10 @@ import { Django } from "@/components/ui/svgs/django";
 export const DATA = {
   name: "Mouad Sodor",
   initials: "MS",
-  url: "https://smouad.dev", // TODO: buy a domain — smouad.dev / mouadsodor.com
+  // Canonical URL — drives metadataBase, OG tags and link previews, so it has to
+  // be a URL that actually resolves. smouad.vercel.app is aliased and ready, but
+  // is behind Vercel Deployment Protection; switch to it once that's disabled.
+  url: "https://portfolio-khaki-sigma-j2u4qfy2z5.vercel.app",
   location: "Tetouan, Morocco",
   locationLink: "https://www.google.com/maps/place/tetouan",
   description:
