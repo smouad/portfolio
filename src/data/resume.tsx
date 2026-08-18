@@ -30,10 +30,7 @@ export const DATA = {
     "Full-stack & AI engineer. I build multi-tenant SaaS platforms, AI agents, and video automation systems. Open to relocation.",
   summary:
     "I build production software end to end — multi-tenant SaaS backends, AI agent platforms with vector search, video generation pipelines, and Manifest V3 browser extensions. Most of my work lives in the messy middle: queue architectures that survive retries, org-scoped permission models, and AI integrations that stay cheap at scale. I currently build insurance and fintech systems at [EvaGrupo](#work), and ship AI products under [Motkan Labs](#work) and [Clipaf](#work). I'm self-taught through the [1337 / 42 Network](#education) peer-learning program, and I'm actively looking for engineering roles in Europe with visa sponsorship.",
-  // TODO: drop your own photo at public/me.png and set this back to "/me.png".
-  // Empty for now so the page falls back to your "MS" initials — the template
-  // shipped with a photo of its author, which obviously can't sit under your name.
-  avatarUrl: "",
+  avatarUrl: "/me.jpg", // pulled from your GitHub avatar
   skills: [
     { name: "TypeScript", icon: Typescript },
     { name: "React", icon: ReactLight },
@@ -177,13 +174,10 @@ export const DATA = {
         "Redis",
         "Stripe",
       ],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/Motkan-labs/brainfast",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
+      // No link: the repo is private, so a "Source" badge here 404s for visitors.
+      // Better fix is a public case-study repo (architecture + diagrams, no product
+      // code) — then link that here.
+      links: [],
       image: "",
       video: "",
     },
@@ -203,14 +197,10 @@ export const DATA = {
         "Modal GPU",
         "Polar",
       ],
-      links: [
-        // TODO: add the real repo URL — I couldn't find Resonance on @smouad
-        {
-          type: "Source",
-          href: "https://github.com/smouad",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
+      // TODO: I couldn't find Resonance on @smouad — send me the real repo URL and
+      // I'll restore the Source badge. Linking your profile instead was a dead end
+      // for anyone clicking it.
+      links: [],
       image: "",
       video: "",
     },
