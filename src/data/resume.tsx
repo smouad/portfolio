@@ -27,9 +27,9 @@ export const DATA = {
   location: "Tetouan, Morocco",
   locationLink: "https://www.google.com/maps/place/tetouan",
   description:
-    "Full-stack & AI engineer. I build multi-tenant SaaS platforms, AI agents, and video automation systems. Open to relocation.",
+    "Full-stack & AI engineer. I build multi-tenant SaaS platforms, AI agents, and video automation systems.",
   summary:
-    "I build production software end to end — multi-tenant SaaS backends, AI agent platforms with vector search, video generation pipelines, and Manifest V3 browser extensions. Most of my work lives in the messy middle: queue architectures that survive retries, org-scoped permission models, and AI integrations that stay cheap at scale. I currently build insurance and fintech systems at [EvaGrupo](#work), and ship AI products under [Motkan Labs](#work) and [Clipaf](#work). I'm self-taught through the [1337 / 42 Network](#education) peer-learning program, and I'm actively looking for engineering roles in Europe with visa sponsorship.",
+    "I build production software end to end — multi-tenant SaaS backends, AI agent platforms with vector search, video generation pipelines, and Manifest V3 browser extensions. Most of my work lives in the messy middle: queue architectures that survive retries, org-scoped permission models, and AI integrations that stay cheap at scale. I currently build insurance and fintech systems at [EvaGrupo](#work), and ship AI products under [Motkan Labs](#work) and [Clipaf](#work). I trained through the [1337 / 42 Network](#education) — no lectures, no grades, just projects reviewed by peers.",
   avatarUrl: "/me.jpg", // pulled from your GitHub avatar
   skills: [
     { name: "TypeScript", icon: Typescript },

@@ -24,8 +24,8 @@ export default function ContactSection() {
           Get in Touch
         </h2>
         <p className="mx-auto max-w-lg text-muted-foreground text-balance">
-          I&apos;m open to full-time engineering roles with visa sponsorship, and to
-          freelance work. Reach me{" "}
+          Working on something hard, or think I&apos;d be a fit for your team?
+          Reach me{" "}
           <Link
             href={DATA.contact.social.LinkedIn.url}
             target="_blank"
