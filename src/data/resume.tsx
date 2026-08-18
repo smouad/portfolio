@@ -7,6 +7,7 @@ import {
   Network,
   MessageSquareCode,
   Triangle,
+  Smartphone,
 } from "lucide-react";
 import { ReactLight } from "@/components/ui/svgs/reactLight";
 import { NextjsIconDark } from "@/components/ui/svgs/nextjsIconDark";
@@ -29,13 +30,14 @@ export const DATA = {
   description:
     "Full-stack & AI engineer. I build multi-tenant SaaS platforms, AI agents, and video automation systems.",
   summary:
-    "I build production software end to end — multi-tenant SaaS backends, AI agent platforms with vector search, video generation pipelines, and Manifest V3 browser extensions. Most of my work lives in the messy middle: queue architectures that survive retries, org-scoped permission models, and AI integrations that stay cheap at scale. I currently build insurance and fintech systems at [EvaGrupo](#work), and ship AI products — Brainfast and Clipaf — under [Motkan Labs](#work). I trained through the [1337 / 42 Network](#education) — no lectures, no grades, just projects reviewed by peers.",
+    "I build production software end to end — multi-tenant SaaS backends, AI agent platforms with vector search, video generation pipelines, and Manifest V3 browser extensions. Most of my work lives in the messy middle: queue architectures that survive retries, org-scoped permission models, and AI integrations that stay cheap at scale. I currently build insurance and fintech systems at [EvaGrupo](#work), and ship products — Brainfast, Clipaf and Pillow Tales — under [Motkan Labs](#work). I trained through the [1337 / 42 Network](#education) — no lectures, no grades, just projects reviewed by peers.",
   avatarUrl: "/me.jpg", // pulled from your GitHub avatar
   skills: [
     { name: "TypeScript", icon: Typescript },
     { name: "React", icon: ReactLight },
     { name: "Next.js", icon: NextjsIconDark },
     { name: "Node.js", icon: Nodejs },
+    { name: "React Native", icon: Smartphone }, // Pillow Tales, shipped iOS + Android
     { name: "Python", icon: Python },
     { name: "Django", icon: Django }, // original EvaGrupo ERP backend
     { name: "PostgreSQL", icon: Postgresql },
@@ -102,14 +104,14 @@ export const DATA = {
     {
       company: "Motkan Labs",
       href: "https://github.com/Motkan-labs",
-      badges: ["Brainfast", "Clipaf"],
+      badges: ["Brainfast", "Clipaf", "Pillow Tales"],
       location: "Remote",
       title: "Founding Engineer", // ?? confirm — depends whether this is your company
       logoUrl: "/motkan.png",
       start: "Jul 2024",
       end: "Present",
       description:
-        "Build the engineering behind both Motkan products. Brainfast is a multi-tenant AI chatbot platform: Bun + Hono API, BullMQ workers, Drizzle/PostgreSQL, and per-tenant Qdrant collections for semantic search, with Gemini Live voice calls, Stripe usage metering, and an embeddable Shadow-DOM widget. Clipaf turns a story prompt into a finished short-form video, backed by an AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and exponential-backoff retries — fanning generation across horizontally scaled workers. Also built the multi-domain Motkan site serving three brands from one Next.js app.",
+        "Build the engineering behind Motkan's products. Brainfast is a multi-tenant AI chatbot platform: Bun + Hono API, BullMQ workers, Drizzle/PostgreSQL, and per-tenant Qdrant collections for semantic search, with Gemini Live voice calls, Stripe usage metering, and an embeddable Shadow-DOM widget. Clipaf turns a story prompt into a finished short-form video, backed by an AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and exponential-backoff retries — fanning generation across horizontally scaled workers. Pillow Tales is a React Native bedtime-story app on iOS and Android, with Convex real-time sync, a parental gate, and subscription entitlements. Also built the multi-domain Motkan site serving three brands from one Next.js app.",
     },
     {
       company: "Freelance",
@@ -167,10 +169,15 @@ export const DATA = {
         "Redis",
         "Stripe",
       ],
-      // No link: the repo is private, so a "Source" badge here 404s for visitors.
-      // Better fix is a public case-study repo (architecture + diagrams, no product
-      // code) — then link that here.
-      links: [],
+      // Repo is private, so a "Source" badge would 404. Linking the org instead —
+      // labelled "Organization" so it doesn't promise code it can't deliver.
+      links: [
+        {
+          type: "Organization",
+          href: "https://github.com/Motkan-labs",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
       image: "",
       video: "",
     },
@@ -216,7 +223,7 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Source",
+          type: "Organization", // org page, not a repo — "Source" over-promised
           href: "https://github.com/clipaf",
           icon: <Icons.github className="size-3" />,
         },
@@ -241,6 +248,55 @@ export const DATA = {
         "PostgreSQL",
         "Redis",
         "Docker",
+      ],
+      links: [
+        {
+          type: "Organization",
+          href: "https://github.com/evagrupo",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "Pillow Tales",
+      href: "", // private repo — Organization badge below instead
+      dates: "2025 - Present",
+      active: true,
+      description:
+        "Bedtime-story mobile app for iOS and Android. Convex powers real-time sync across devices; a parental gate guards purchases and settings. Subscription billing with entitlement checks, narrated stories with audio playback, reading-progress tracking, a rewards system, and story sharing — plus an in-app account-deletion flow for App Store compliance.",
+      technologies: [
+        "React Native",
+        "Expo",
+        "TypeScript",
+        "Convex",
+        "Dodo Payments",
+        "expo-audio",
+      ],
+      links: [
+        {
+          type: "Organization",
+          href: "https://github.com/Motkan-labs",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "",
+      video: "",
+    },
+    {
+      title: "K-TUIN Protect",
+      href: "",
+      dates: "2025 - 2026",
+      active: false,
+      description:
+        "Device-insurance product for a retail chain: a mobile app plus an internal portal where sellers enrol customers straight into the Eva ERP. Next.js server actions hold the ERP API key so it never reaches the browser, quote premiums live as the form is filled, and link policies onto an existing client when the email is already known rather than creating duplicates.",
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Server Actions",
+        "REST API",
       ],
       links: [
         {
