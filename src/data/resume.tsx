@@ -157,7 +157,7 @@ export const DATA = {
   projects: [
     {
       title: "Brainfast",
-      href: "https://github.com/Motkan-labs/brainfast",
+      href: "", // private repo — a link here 404s for visitors
       dates: "2025 - Present",
       active: true,
       description:
@@ -183,7 +183,7 @@ export const DATA = {
     },
     {
       title: "Resonance",
-      href: "https://github.com/smouad",
+      href: "", // TODO: real Resonance URL
       dates: "2025",
       active: true,
       description:
@@ -261,7 +261,7 @@ export const DATA = {
     },
     {
       title: "RefCase",
-      href: "https://github.com/smouad",
+      href: "", // private client work — no public destination
       dates: "2025",
       active: true,
       description:
