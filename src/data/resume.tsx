@@ -29,7 +29,7 @@ export const DATA = {
   description:
     "Full-stack & AI engineer. I build multi-tenant SaaS platforms, AI agents, and video automation systems.",
   summary:
-    "I build production software end to end — multi-tenant SaaS backends, AI agent platforms with vector search, video generation pipelines, and Manifest V3 browser extensions. Most of my work lives in the messy middle: queue architectures that survive retries, org-scoped permission models, and AI integrations that stay cheap at scale. I currently build insurance and fintech systems at [EvaGrupo](#work), and ship AI products under [Motkan Labs](#work) and [Clipaf](#work). I trained through the [1337 / 42 Network](#education) — no lectures, no grades, just projects reviewed by peers.",
+    "I build production software end to end — multi-tenant SaaS backends, AI agent platforms with vector search, video generation pipelines, and Manifest V3 browser extensions. Most of my work lives in the messy middle: queue architectures that survive retries, org-scoped permission models, and AI integrations that stay cheap at scale. I currently build insurance and fintech systems at [EvaGrupo](#work), and ship AI products — Brainfast and Clipaf — under [Motkan Labs](#work). I trained through the [1337 / 42 Network](#education) — no lectures, no grades, just projects reviewed by peers.",
   avatarUrl: "/me.jpg", // pulled from your GitHub avatar
   skills: [
     { name: "TypeScript", icon: Typescript },
@@ -79,7 +79,10 @@ export const DATA = {
     },
   },
 
-  // TODO: I don't know your real titles or start/end dates — fix the ones marked ??
+  // Dates below are derived from commit history on GitHub, not memory:
+  //   EvaGrupo     first commit 2024-09-02, latest 2026-08-12 (1,139 commits, 2 accounts)
+  //   Motkan Labs  Clipaf from 2024-07-27; Brainfast from 2025-08-26; latest 2026-07-28
+  // ?? Titles are still my best guess — correct any that are wrong.
   work: [
     {
       company: "EvaGrupo",
@@ -87,8 +90,8 @@ export const DATA = {
       badges: ["Current"],
       location: "Remote",
       title: "Full-Stack Developer", // ?? confirm title
-      logoUrl: "",
-      start: "2024", // ?? confirm
+      logoUrl: "/evagrupo.png",
+      start: "Sep 2024",
       end: "Present",
       // ?? Did you build the original Django version, or inherit it? Did you lead the
       // migration? "Migrated a production Django ERP to Next.js/Node" is a senior-level
@@ -99,26 +102,14 @@ export const DATA = {
     {
       company: "Motkan Labs",
       href: "https://github.com/Motkan-labs",
-      badges: [],
+      badges: ["Brainfast", "Clipaf"],
       location: "Remote",
-      title: "Founding Engineer", // ?? is this your own company, or a client?
-      logoUrl: "",
-      start: "2025", // ?? confirm
+      title: "Founding Engineer", // ?? confirm — depends whether this is your company
+      logoUrl: "/motkan.png",
+      start: "Jul 2024",
       end: "Present",
       description:
-        "Built Brainfast, a multi-tenant AI chatbot platform: Bun + Hono API, BullMQ workers, Drizzle/PostgreSQL, and Qdrant vector search for per-tenant knowledge bases. Added Gemini Live voice calls, Stripe usage-based billing, an embeddable Shadow-DOM widget, and Discord/Slack/WhatsApp integrations. Also built the multi-domain Motkan marketing site serving three brands from a single Next.js app.",
-    },
-    {
-      company: "Clipaf",
-      href: "https://github.com/clipaf",
-      badges: [],
-      location: "Remote",
-      title: "Full-Stack Developer", // ?? confirm
-      logoUrl: "",
-      start: "2025", // ?? confirm
-      end: "Present",
-      description:
-        "Built an AI video creation platform taking a story prompt through script, narration, imagery, and render. Designed the AI Queue microservice — a Hono + BullMQ job system with a typed client SDK, webhook callbacks, and exponential-backoff retries — that fans speech and image generation out across horizontally scaled workers.",
+        "Build the engineering behind both Motkan products. Brainfast is a multi-tenant AI chatbot platform: Bun + Hono API, BullMQ workers, Drizzle/PostgreSQL, and per-tenant Qdrant collections for semantic search, with Gemini Live voice calls, Stripe usage metering, and an embeddable Shadow-DOM widget. Clipaf turns a story prompt into a finished short-form video, backed by an AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and exponential-backoff retries — fanning generation across horizontally scaled workers. Also built the multi-domain Motkan site serving three brands from one Next.js app.",
     },
     {
       company: "Freelance",
@@ -127,30 +118,32 @@ export const DATA = {
       location: "Remote",
       title: "Full-Stack Developer",
       logoUrl: "",
-      start: "2024", // ?? confirm
+      start: "2024",
       end: "Present",
       description:
         "Delivered eight client projects: RefCase (sales reference-matching Chrome extension + Next.js backend with org-level RBAC), TOAD (real-time SEO auditor extension), Dia (Gemini-powered jewelry design assistant), Dan.ai (chat interface routing 100+ models), a TCF Canada learning platform, and an Instagram sync tool.",
     },
   ],
 
-  // TODO: confirm years. Remove this section entirely if you'd rather not show it.
+  // Bracketed from repo history: first 42 project Dec 2022, last Apr 2024.
+  // ALX repos run Mar 2023 - Jul 2024.
   education: [
     {
-      school: "1337 School (42 Network)",
+      school: "1337 School — 42 Network",
       href: "https://1337.ma",
-      degree: "Software Engineering — peer-to-peer, project-based program",
-      logoUrl: "",
-      start: "2022", // ?? confirm
-      end: "2024", // ?? confirm
+      degree:
+        "Software Engineering · Tuition-free, project-based, peer-reviewed — no lectures, no grades",
+      logoUrl: "/1337.png",
+      start: "2022",
+      end: "2024",
     },
     {
       school: "ALX Africa",
       href: "https://www.alxafrica.com",
       degree: "Software Engineering Program",
-      logoUrl: "",
-      start: "2023", // ?? confirm
-      end: "2024", // ?? confirm
+      logoUrl: "/alx.png",
+      start: "2023",
+      end: "2024",
     },
   ],
 
@@ -207,7 +200,7 @@ export const DATA = {
     {
       title: "Clipaf — AI Video Platform",
       href: "https://github.com/clipaf",
-      dates: "2025 - Present",
+      dates: "2024 - Present", // first commit 2024-07-27, later folded into Motkan Labs
       active: true,
       description:
         "End-to-end AI video creation: a story prompt becomes a script, narration, generated imagery, and a rendered short-form video. Backed by the AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and retry handling across horizontally scaled workers.",
