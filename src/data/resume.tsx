@@ -152,7 +152,7 @@ export const DATA = {
   projects: [
     {
       title: "Brainfast",
-      href: "", // private repo — a link here 404s for visitors
+      href: "https://brainfast.ai",
       dates: "2025 - Present",
       active: true,
       description:
@@ -169,9 +169,13 @@ export const DATA = {
         "Redis",
         "Stripe",
       ],
-      // Repo is private, so a "Source" badge would 404. Linking the org instead —
-      // labelled "Organization" so it doesn't promise code it can't deliver.
+      // Repo is private, so no "Source" badge — the live product is the proof.
       links: [
+        {
+          type: "Website",
+          href: "https://brainfast.ai",
+          icon: <Icons.globe className="size-3" />,
+        },
         {
           type: "Organization",
           href: "https://github.com/Motkan-labs",
@@ -206,7 +210,7 @@ export const DATA = {
     },
     {
       title: "Clipaf — AI Video Platform",
-      href: "https://github.com/clipaf",
+      href: "https://clipaf.com",
       dates: "2024 - Present", // first commit 2024-07-27, later folded into Motkan Labs
       active: true,
       description:
@@ -223,7 +227,12 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Organization", // org page, not a repo — "Source" over-promised
+          type: "Website",
+          href: "https://clipaf.com",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "Organization",
           href: "https://github.com/clipaf",
           icon: <Icons.github className="size-3" />,
         },
@@ -250,6 +259,11 @@ export const DATA = {
         "Docker",
       ],
       links: [
+        {
+          type: "Website",
+          href: "https://evagrupo.com",
+          icon: <Icons.globe className="size-3" />,
+        },
         {
           type: "Organization",
           href: "https://github.com/evagrupo",
@@ -300,9 +314,9 @@ export const DATA = {
       ],
       links: [
         {
-          type: "Organization",
-          href: "https://github.com/evagrupo",
-          icon: <Icons.github className="size-3" />,
+          type: "K-TUIN",
+          href: "https://ktuin.es",
+          icon: <Icons.globe className="size-3" />,
         },
       ],
       image: "",
