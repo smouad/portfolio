@@ -81,19 +81,18 @@ export const DATA = {
     },
   },
 
-  // Dates below are derived from commit history on GitHub, not memory:
-  //   EvaGrupo     first commit 2024-09-02, latest 2026-08-12 (1,139 commits, 2 accounts)
-  //   Motkan Labs  Clipaf from 2024-07-27; Brainfast from 2025-08-26; latest 2026-07-28
-  // ?? Titles are still my best guess — correct any that are wrong.
+  // Titles and start dates confirmed by Mouad.
+  // ?? EvaGrupo began as Backend Developer before becoming Software Engineer —
+  //    send the transition month and this can be split into two positions.
   work: [
     {
       company: "EvaGrupo",
       href: "https://github.com/evagrupo",
       badges: ["Current"],
       location: "Remote",
-      title: "Full-Stack Developer", // ?? confirm title
+      title: "Software Engineer",
       logoUrl: "/evagrupo.png",
-      start: "Sep 2024",
+      start: "Jul 2024",
       end: "Present",
       // ?? Did you build the original Django version, or inherit it? Did you lead the
       // migration? "Migrated a production Django ERP to Next.js/Node" is a senior-level
@@ -106,12 +105,12 @@ export const DATA = {
       href: "https://github.com/Motkan-labs",
       badges: ["Brainfast", "Clipaf", "Pillow Tales"],
       location: "Remote",
-      title: "Founding Engineer", // ?? confirm — depends whether this is your company
+      title: "Co-founder & AI Engineer",
       logoUrl: "/motkan.png",
-      start: "Jul 2024",
+      start: "Jun 2025",
       end: "Present",
       description:
-        "Build the engineering behind Motkan's products. Brainfast is a multi-tenant AI chatbot platform: Bun + Hono API, BullMQ workers, Drizzle/PostgreSQL, and per-tenant Qdrant collections for semantic search, with Gemini Live voice calls, Stripe usage metering, and an embeddable Shadow-DOM widget. Clipaf turns a story prompt into a finished short-form video, backed by an AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and exponential-backoff retries — fanning generation across horizontally scaled workers. Pillow Tales is a React Native bedtime-story app on iOS and Android, with Convex real-time sync, a parental gate, and subscription entitlements. Also built the multi-domain Motkan site serving three brands from one Next.js app.",
+        "Co-founded Motkan Labs and lead engineering across its products. Brainfast is a multi-tenant AI chatbot platform: Bun + Hono API, BullMQ workers, Drizzle/PostgreSQL, and per-tenant Qdrant collections for semantic search, with Gemini Live voice calls, Stripe usage metering, and an embeddable Shadow-DOM widget. Clipaf turns a story prompt into a finished short-form video, backed by an AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and exponential-backoff retries — fanning generation across horizontally scaled workers. Pillow Tales is a React Native bedtime-story app on iOS and Android, with Convex real-time sync, a parental gate, and subscription entitlements. Also built the multi-domain Motkan site serving three brands from one Next.js app.",
     },
     {
       company: "Freelance",
@@ -120,15 +119,15 @@ export const DATA = {
       location: "Remote",
       title: "Full-Stack Developer",
       logoUrl: "",
-      start: "2024",
+      start: "2025",
       end: "Present",
       description:
         "Delivered eight client projects: RefCase (sales reference-matching Chrome extension + Next.js backend with org-level RBAC), TOAD (real-time SEO auditor extension), Dia (Gemini-powered jewelry design assistant), Dan.ai (chat interface routing 100+ models), a TCF Canada learning platform, and an Instagram sync tool.",
     },
   ],
 
-  // Bracketed from repo history: first 42 project Dec 2022, last Apr 2024.
-  // ALX repos run Mar 2023 - Jul 2024.
+  // 1337 bracketed from repo history (first 42 project Dec 2022, last Apr 2024).
+  // ALX confirmed by Mouad: 1-year program starting Feb 2023.
   education: [
     {
       school: "1337 School — 42 Network",
@@ -144,8 +143,8 @@ export const DATA = {
       href: "https://www.alxafrica.com",
       degree: "Software Engineering Program",
       logoUrl: "/alx.png",
-      start: "2023",
-      end: "2024",
+      start: "Feb 2023",
+      end: "Feb 2024",
     },
   ],
 
