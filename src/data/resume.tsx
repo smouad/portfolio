@@ -81,9 +81,10 @@ export const DATA = {
     },
   },
 
-  // Titles and start dates confirmed by Mouad.
-  // ?? EvaGrupo began as Backend Developer before becoming Software Engineer —
-  //    send the transition month and this can be split into two positions.
+  // Titles and dates confirmed by Mouad, and mirrored on LinkedIn:
+  //   EvaGrupo    Backend Developer Jul-Oct 2024, then Software Engineer Nov 2024-
+  //   Motkan Labs Co-founder & AI Engineer, Jun 2025-
+  //   Freelance   Jan 2025-
   work: [
     {
       company: "EvaGrupo",
@@ -98,7 +99,7 @@ export const DATA = {
       // migration? "Migrated a production Django ERP to Next.js/Node" is a senior-level
       // line — tell me which is true and I'll sharpen this.
       description:
-        "Build and maintain a multi-tenant ERP for insurance and fintech operations, originally built on Python/Django and since evolved onto a Next.js and Node/PostgreSQL stack. Shipped per-product partner ownership, multi-supervisor CRM assignment, scheduled-call workflows, and a product image pipeline. Also maintain seven branded sub-apps sharing one design system and API layer.",
+        "Joined as a Backend Developer and moved into a Software Engineer role after four months. Build and maintain a multi-tenant ERP for insurance and fintech operations, originally built on Python/Django and since evolved onto a Next.js and Node/PostgreSQL stack. Shipped per-product partner ownership, multi-supervisor CRM assignment, scheduled-call workflows, and a product image pipeline. Also maintain seven branded sub-apps sharing one design system and API layer.",
     },
     {
       company: "Motkan Labs",
@@ -119,7 +120,7 @@ export const DATA = {
       location: "Remote",
       title: "Full-Stack Developer",
       logoUrl: "",
-      start: "2025",
+      start: "Jan 2025",
       end: "Present",
       description:
         "Delivered eight client projects: RefCase (sales reference-matching Chrome extension + Next.js backend with org-level RBAC), TOAD (real-time SEO auditor extension), Dia (Gemini-powered jewelry design assistant), Dan.ai (chat interface routing 100+ models), a TCF Canada learning platform, and an Instagram sync tool.",
