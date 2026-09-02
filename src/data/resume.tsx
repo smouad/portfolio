@@ -169,6 +169,9 @@ export const DATA = {
         "Redis",
         "Stripe",
       ],
+      // Product demo pulled from the Brainfast landing page hero (Mux asset).
+      // Mux MP4 renditions are disabled on that asset, so this is the animated
+      // GIF rendition. Swap to an MP4 in `video` if renditions get enabled.
       // Repo is private, so no "Source" badge — the live product is the proof.
       links: [
         {
@@ -182,7 +185,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
+      image: "/brainfast-demo.gif",
       video: "",
     },
     {
