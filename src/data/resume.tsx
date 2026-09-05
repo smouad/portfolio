@@ -189,29 +189,6 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Resonance",
-      href: "", // TODO: real Resonance URL
-      dates: "2025",
-      active: true,
-      description:
-        "Open-source alternative to ElevenLabs: AI text-to-speech with zero-shot voice cloning powered by Chatterbox TTS running on serverless GPUs. Includes credit-based billing and a full generation history.",
-      technologies: [
-        "Next.js 16",
-        "React 19",
-        "Prisma",
-        "PostgreSQL",
-        "Clerk",
-        "Modal GPU",
-        "Polar",
-      ],
-      // TODO: I couldn't find Resonance on @smouad — send me the real repo URL and
-      // I'll restore the Source badge. Linking your profile instead was a dead end
-      // for anyone clicking it.
-      links: [],
-      image: "",
-      video: "",
-    },
-    {
       title: "Clipaf — AI Video Platform",
       href: "https://clipaf.com",
       dates: "2024 - Present", // first commit 2024-07-27, later folded into Motkan Labs
@@ -343,24 +320,6 @@ export const DATA = {
         "Zustand",
       ],
       links: [],
-      image: "",
-      video: "",
-    },
-    {
-      title: "Motkan — Multi-Domain Site",
-      href: "https://motkan.com",
-      dates: "2025 - Present",
-      active: true,
-      description:
-        "One Next.js application serving three distinct domains with separate branding, content, and landing pages — resolved by host-based routing at the edge rather than three separate deployments.",
-      technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Vercel"],
-      links: [
-        {
-          type: "Source",
-          href: "https://github.com/smouad/motkan-site",
-          icon: <Icons.github className="size-3" />,
-        },
-      ],
       image: "",
       video: "",
     },
