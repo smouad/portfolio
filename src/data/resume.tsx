@@ -21,10 +21,8 @@ import { Django } from "@/components/ui/svgs/django";
 export const DATA = {
   name: "Mouad Sodor",
   initials: "MS",
-  // Canonical URL — drives metadataBase, OG tags and link previews, so it has to
-  // be a URL that actually resolves. smouad.vercel.app is aliased and ready, but
-  // is behind Vercel Deployment Protection; switch to it once that's disabled.
-  url: "https://portfolio-khaki-sigma-j2u4qfy2z5.vercel.app",
+  // Canonical URL: drives metadataBase, OG tags, sitemap and the CV link.
+  url: "https://msodor.dev",
   location: "Tetouan, Morocco",
   languages: ["Arabic", "English", "French", "Spanish"],
   locationLink: "https://www.google.com/maps/place/tetouan",
