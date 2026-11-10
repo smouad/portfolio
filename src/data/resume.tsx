@@ -29,7 +29,7 @@ export const DATA = {
   description:
     "Full-stack & AI engineer. I build multi-tenant SaaS platforms, AI agents, and video automation systems.",
   summary:
-    "I ship production software end to end — NestJS and Hono backends, Next.js web apps and React Native mobile apps, all in TypeScript. At [EvaGrupo](#work) I build the multi-tenant ERP behind an insurance and fintech group: a predictive dialer for its call centre, a partner portal for retail chains, and the access rules that keep each partner's data its own. As co-founder of [Motkan Labs](#work) I shipped Ivaluna, a baby-care app on the App Store, and built billing and the embeddable chat widget for Brainfast, an AI agent platform. I trained at [1337 / 42 Network](#education): no lectures and no grades, just projects reviewed by peers.",
+    "I ship production software end to end — NestJS and Hono backends, Next.js web apps and React Native mobile apps, all in TypeScript. At [EvaGrupo](#work) I build the multi-tenant ERP behind an insurance and fintech group: a predictive dialer for its call centre, a partner portal for retail chains, and the access rules that keep each partner's data its own. As co-founder of [Motkan Labs](#work) I shipped Ivaluna, a baby-care app on the App Store, and built billing and the embeddable chat widget for Brainfast, an AI agent platform. I'm also a student at [1337 / 42 Network](#education): no lectures and no grades, just projects reviewed by peers.",
   avatarUrl: "/me.jpg", // pulled from your GitHub avatar
   skills: [
     { name: "TypeScript", icon: Typescript },
@@ -161,7 +161,7 @@ export const DATA = {
     },
   ],
 
-  // 1337 bracketed from repo history (first 42 project Dec 2022, last Apr 2024).
+  // 1337: enrolled Aug 2022, still ongoing (confirmed by Mouad, matches LinkedIn).
   // ALX confirmed by Mouad: 1-year program starting Feb 2023.
   education: [
     {
@@ -170,8 +170,8 @@ export const DATA = {
       degree:
         "Software Engineering · Tuition-free, project-based, peer-reviewed — no lectures, no grades",
       logoUrl: "/1337.png",
-      start: "2022",
-      end: "2024",
+      start: "Aug 2022",
+      end: "Present",
     },
     {
       school: "ALX Africa",
