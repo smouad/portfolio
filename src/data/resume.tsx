@@ -26,7 +26,7 @@ export const DATA = {
   // is behind Vercel Deployment Protection; switch to it once that's disabled.
   url: "https://portfolio-khaki-sigma-j2u4qfy2z5.vercel.app",
   location: "Tetouan, Morocco",
-  languages: ["Arabic", "French", "English", "Spanish"],
+  languages: ["Arabic", "English", "French", "Spanish"],
   locationLink: "https://www.google.com/maps/place/tetouan",
   description:
     "Full-stack & AI engineer. I build multi-tenant SaaS platforms, AI agents, and video automation systems.",
@@ -61,7 +61,7 @@ export const DATA = {
       { group: "Frontend & mobile", items: ["React", "Next.js", "TanStack Query", "Tailwind CSS", "React Native", "Expo", "Capacitor"] },
       { group: "AI & media", items: ["Claude API", "OpenAI", "Google Gemini", "Vercel AI SDK", "Qdrant / RAG", "Remotion"] },
       { group: "Infra & tools", items: ["Docker", "Vercel", "Cloudflare R2", "Git", "Jest"] },
-      { group: "Spoken", items: ["Arabic", "French", "English", "Spanish"] },
+      { group: "Spoken", items: ["Arabic (native)", "English (fluent)", "French (conversational)", "Spanish (conversational)"] },
     ],
   },
   navbar: [
