@@ -43,7 +43,7 @@ export const DATA = {
     { name: "PostgreSQL", icon: Postgresql },
     { name: "Docker", icon: Docker },
     // AI — each of these is backed by shipped work, not tutorials:
-    { name: "Google Gemini", icon: Sparkles }, // Dia, Video Maker, Dan.ai, Brainfast voice
+    { name: "Google Gemini", icon: Sparkles }, // Dia, Dan.ai, Brainfast voice
     { name: "OpenAI", icon: Bot }, // embeddings pipeline in Brainfast
     { name: "Qdrant / RAG", icon: Network }, // per-tenant vector collections, semantic search
     { name: "AI SDK", icon: Triangle }, // streaming + tool calls across 100+ models in Dan.ai
@@ -215,8 +215,69 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "",
-      video: "",
+      image: "/projects/clipaf-poster.jpg",
+      video: "/projects/clipaf.mp4",
+    },
+    {
+      title: "Bijiao",
+      href: "https://www.bijiao.app",
+      dates: "2026 - Present",
+      active: true,
+      // Contributions per apps-frontend history: car quotation flow in both
+      // editions, full Chinese UI + catalog localisation for bijiao-zh.
+      description:
+        "Consumer app for EvaGrupo that puts a Xiaomi store, Eva Protect device insurance, insurance and mobile/fibre plans, and everyday services in one place — shipped on iOS, Android and the web, plus a separate Chinese-language edition. Built on the team's white-label Expo platform, where each brand is a feature manifest over shared modules. I built the car quotation flow across both editions and localised the Chinese app's interface and product catalog.",
+      technologies: [
+        "React Native",
+        "Expo Router",
+        "React Native Web",
+        "TypeScript",
+        "TanStack Query",
+        "Zustand",
+        "i18next",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.bijiao.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "App Store",
+          href: "https://apps.apple.com/es/app/bijiao/id6768951308",
+          icon: <Smartphone className="size-3" />,
+        },
+      ],
+      image: "/projects/bijiao-poster.jpg",
+      video: "/projects/bijiao.mp4",
+    },
+    {
+      title: "Estibadores",
+      href: "https://estibadores.app",
+      dates: "2026 - Present",
+      active: true,
+      description:
+        "Branded member app on the same EvaGrupo platform: Eva Protect device insurance, life, home and health cover, a Xiaomi store with instalment payments, and mobile and fibre plans — all contracted digitally from the phone, with the EVA assistant for support. Live on the App Store.",
+      technologies: [
+        "React Native",
+        "Expo Router",
+        "React Native Web",
+        "TypeScript",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://estibadores.app",
+          icon: <Icons.globe className="size-3" />,
+        },
+        {
+          type: "App Store",
+          href: "https://apps.apple.com/es/app/estibadores/id6815605852",
+          icon: <Smartphone className="size-3" />,
+        },
+      ],
+      image: "/projects/estibadores-poster.jpg",
+      video: "/projects/estibadores.mp4",
     },
     {
       title: "EvaGrupo ERP",
@@ -358,15 +419,6 @@ export const DATA = {
       location: "Next.js · Drizzle · Neon PostgreSQL",
       description:
         "Two independent frontend designs sharing a single backend and database, letting the client A/B an entire product experience without forking the API.",
-      image: "",
-      links: [],
-    },
-    {
-      title: "Video Maker — AI Story Generator",
-      dates: "2025",
-      location: "Python · Streamlit · Google Gemini",
-      description:
-        "Generates long-form calming and bedtime-story videos: AI concept, sectioned script, per-section TTS, and per-scene generated imagery, with audio and images produced in parallel under API rate limits.",
       image: "",
       links: [],
     },

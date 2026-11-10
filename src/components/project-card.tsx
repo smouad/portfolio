@@ -72,6 +72,9 @@ export function ProjectCard({
             {video ? (
               <video
                 src={video}
+                poster={image || undefined}
+                preload="metadata"
+                aria-label={`${title} demo`}
                 autoPlay
                 loop
                 muted
