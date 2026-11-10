@@ -30,7 +30,7 @@ export const DATA = {
   description:
     "Full-stack & AI engineer. I build multi-tenant SaaS platforms, AI agents, and video automation systems.",
   summary:
-    "I build production software end to end — multi-tenant SaaS backends, AI agent platforms with vector search, video generation pipelines, and Manifest V3 browser extensions. Most of my work lives in the messy middle: queue architectures that survive retries, org-scoped permission models, and AI integrations that stay cheap at scale. I currently build insurance and fintech systems at [EvaGrupo](#work), and ship products — Brainfast, Clipaf and Pillow Tales — under [Motkan Labs](#work). I trained through the [1337 / 42 Network](#education) — no lectures, no grades, just projects reviewed by peers.",
+    "I ship production software end to end — NestJS and Hono backends, Next.js web apps and React Native mobile apps, all in TypeScript. At [EvaGrupo](#work) I build the multi-tenant ERP behind an insurance and fintech group: a predictive dialer for its call centre, a partner portal for retail chains, and the access rules that keep each partner's data its own. As co-founder of [Motkan Labs](#work) I built billing and the embeddable chat widget for Brainfast, an AI agent platform, and video templates for Clipaf. I trained at [1337 / 42 Network](#education): no lectures and no grades, just projects reviewed by peers.",
   avatarUrl: "/me.jpg", // pulled from your GitHub avatar
   skills: [
     { name: "TypeScript", icon: Typescript },
@@ -49,6 +49,19 @@ export const DATA = {
     { name: "AI SDK", icon: Triangle }, // streaming + tool calls across 100+ models in Dan.ai
     { name: "Prompt Engineering", icon: MessageSquareCode }, // system prompts, personas, cheap-classifier routing
   ],
+  // Recruiter-facing CV (/cv). Short on purpose: one page, every line a result.
+  cv: {
+    headline: "Full-Stack Engineer · TypeScript, Node.js, React, React Native",
+    summary:
+      "Full-stack engineer with 2+ years shipping production systems for an insurance and fintech group and for my own SaaS products. I own features end to end: database schema, API, web and mobile UI, then the release. Most at home where business rules get hard: telephony, billing, multi-tenant access control.",
+    skills: [
+      { group: "Languages", items: ["TypeScript", "JavaScript", "Python", "SQL", "C"] },
+      { group: "Backend", items: ["Node.js", "NestJS", "Hono", "Bun", "PostgreSQL", "Drizzle ORM", "Redis", "BullMQ", "Django"] },
+      { group: "Frontend & mobile", items: ["React", "Next.js", "TanStack Query", "Tailwind CSS", "React Native", "Expo"] },
+      { group: "AI & media", items: ["OpenAI", "Google Gemini", "Vercel AI SDK", "Remotion"] },
+      { group: "Infra & tools", items: ["Docker", "Vercel", "Cloudflare R2", "Git", "Jest"] },
+    ],
+  },
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
     { href: "/cv", icon: FileText, label: "CV" },
@@ -97,7 +110,16 @@ export const DATA = {
       start: "Jul 2024",
       end: "Present",
       description:
-        "Joined as a Backend Developer and moved into a Software Engineer role after four months. Build and maintain a multi-tenant ERP for insurance and fintech operations, originally built on Python/Django and since evolved onto a Next.js and Node/PostgreSQL stack. Shipped per-product partner ownership, multi-supervisor CRM assignment, scheduled-call workflows, and a product image pipeline. Also maintain seven branded sub-apps sharing one design system and API layer.",
+        "Multi-tenant ERP and consumer apps for an insurance and fintech group. Joined as a Backend Developer and was promoted to Software Engineer after four months. NestJS, Drizzle and PostgreSQL behind a Next.js front end.",
+      // From erp-backend / erp-frontend / apps-frontend history.
+      context: "Insurance and fintech group. Promoted from Backend Developer after four months. NestJS, Drizzle, PostgreSQL, Next.js.", // one line on the CV
+      highlights: [
+        "Built the call centre's predictive dialer on the Netelip telephony API (customer-first calling, pacing, instant connect, agent fallback) and the screens agents and managers run it from.",
+        "Built the K-TUIN partner portal: a partner-branded CRM scoped to each company, per-product partner ownership, an Eva Protect sales dashboard and a partner API.",
+        "Tightened CRM access control (multiple supervisors per user, call logs scoped to the reporting line, read-only observers) and closed a leak that exposed partner dashboards and lead analytics.",
+        "Shipped absence coverage, so agents can work an absent colleague's leads and the sale is credited to whoever closes it, plus lead scheduling and status history.",
+        "On Bijiao, a React Native and Expo app for iOS, Android and the web, built the car quotation flow and the Chinese-language edition.",
+      ],
     },
     {
       company: "Motkan Labs",
@@ -109,7 +131,15 @@ export const DATA = {
       start: "Jun 2025",
       end: "Present",
       description:
-        "Co-founded Motkan Labs and lead engineering across its products. Brainfast is a multi-tenant AI chatbot platform: Bun + Hono API, BullMQ workers, Drizzle/PostgreSQL, and per-tenant Qdrant collections for semantic search, with Gemini Live voice calls, Stripe usage metering, and an embeddable Shadow-DOM widget. Clipaf turns a story prompt into a finished short-form video, backed by an AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and exponential-backoff retries — fanning generation across horizontally scaled workers. Pillow Tales is a React Native bedtime-story app on iOS and Android, with Convex real-time sync, a parental gate, and subscription entitlements.",
+        "Product studio I co-founded. We build and run our own SaaS: Brainfast (AI agents for customer support), Clipaf (autonomous social content) and Pillow Tales (bedtime stories).",
+      // From brainfast and clipaf repo history.
+      context: "Product studio I co-founded to build and run our own SaaS products.", // one line on the CV
+      highlights: [
+        "Brainfast: built prepaid-wallet billing on Dodo Payments that charges AI usage pay-as-you-go to sub-cent precision and resyncs subscriptions after checkout and plan changes.",
+        "Brainfast: built the embeddable chat widget with live customisation, the agent-builder workspace and onboarding, and Turnstile-protected magic-link login.",
+        "Clipaf: built the Remotion templates for its first short-form formats (Reddit stories, animated text chats), with emoji and font loading, asset preloading and R2 deploys.",
+        "Pillow Tales: shipped a React Native bedtime-story app for iOS and Android with Convex real-time sync, a parental gate and subscriptions.",
+      ],
     },
     {
       company: "Freelance",
@@ -121,7 +151,12 @@ export const DATA = {
       start: "Jan 2025",
       end: "Present",
       description:
-        "Delivered eight client projects: RefCase (sales reference-matching Chrome extension + Next.js backend with org-level RBAC), TOAD (real-time SEO auditor extension), Dia (Gemini-powered jewelry design assistant), Dan.ai (chat interface routing 100+ models), a TCF Canada learning platform, and an Instagram sync tool.",
+        "Eight client projects delivered end to end, from browser extensions to AI products.",
+      context: "", // one line on the CV
+      highlights: [
+        "RefCase: a Chrome extension and Next.js backend that matches sales teams to customer reference cases, with CSV import, faceted filters, AI matching and organisation-level permissions.",
+        "Dan.ai: chat across 100+ models with the Vercel AI SDK and per-token cost tracking. Also Dia (a Gemini design assistant) and TOAD (an SEO audit extension).",
+      ],
     },
   ],
 
@@ -153,8 +188,8 @@ export const DATA = {
       href: "https://brainfast.ai",
       dates: "2025 - Present",
       active: true,
-      description:
-        "Multi-tenant AI chatbot platform. Organizations upload documents and URLs, which a BullMQ pipeline extracts, embeds, and stores in per-tenant Qdrant collections for semantic search. Includes agent builder, Gemini Live voice calls, Stripe usage metering, and an embeddable Shadow-DOM widget.",
+      description: 
+        "AI agent platform for customer support. Teams upload documents and URLs; a BullMQ pipeline extracts and embeds them into per-tenant Qdrant collections, and agents answer on the web, WhatsApp and voice. I built the prepaid-wallet billing on Dodo Payments (pay-as-you-go AI usage with sub-cent precision) and the embeddable chat widget with live customisation.",
       technologies: [
         "Bun",
         "Hono",
@@ -164,8 +199,7 @@ export const DATA = {
         "PostgreSQL",
         "Qdrant",
         "BullMQ",
-        "Redis",
-        "Stripe",
+        "Dodo Payments",
       ],
       // Product demo pulled from the Brainfast landing page hero (Mux asset).
       // Mux MP4 renditions are disabled on that asset, so this is the animated
@@ -187,21 +221,20 @@ export const DATA = {
       video: "",
     },
     {
-      title: "Clipaf — AI Video Platform",
+      title: "Clipaf",
       href: "https://clipaf.com",
       dates: "2024 - Present", // first commit 2024-07-27, later folded into Motkan Labs
       active: true,
-      description:
-        "End-to-end AI video creation: a story prompt becomes a script, narration, generated imagery, and a rendered short-form video. Backed by the AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and retry handling across horizontally scaled workers.",
+      description: 
+        "Autonomous content platform: give it a brief and it makes the videos, images and captions, plans the week and posts to Instagram, TikTok, YouTube, LinkedIn, Facebook and X, tailoring each post per channel and tracking every delivery. I built the Remotion templates behind its first short-form formats (Reddit stories and animated text-message chats), with font and emoji loading, asset preloading and R2 deploys, then added captions and transcription to its story studio.",
       technologies: [
-        "Next.js",
+        "Remotion",
         "React",
+        "TypeScript",
+        "Cloudflare R2",
+        "Bun",
         "Hono",
         "BullMQ",
-        "Redis",
-        "Remotion",
-        "TypeScript",
-        "Docker",
       ],
       links: [
         {
@@ -284,18 +317,17 @@ export const DATA = {
       href: "https://github.com/evagrupo",
       dates: "2024 - Present",
       active: true,
-      description:
-        "Multi-tenant ERP for insurance and fintech operations: CRM with lead scheduling and multi-supervisor assignment, per-product partner ownership, product catalog with image pipeline, and seven branded sub-apps sharing one backend and design system. Started life as a Python/Django application before moving to a Next.js and Node stack.",
+      description: 
+        "Multi-tenant ERP that runs an insurance and fintech group: CRM, call centre, partners, products and policies, plus seven branded sub-apps on one API. My parts: a predictive dialer on the Netelip telephony API, the K-TUIN partner portal, absence coverage for agents, and access rules that scope every lead, call log and dashboard to the right company and reporting line.",
       technologies: [
-        "Python",
-        "Django",
+        "NestJS",
         "Next.js",
-        "React",
         "TypeScript",
-        "Node.js",
+        "Drizzle ORM",
         "PostgreSQL",
+        "BullMQ",
         "Redis",
-        "Docker",
+        "TanStack Query",
       ],
       links: [
         {
@@ -342,14 +374,14 @@ export const DATA = {
       href: "",
       dates: "2025 - 2026",
       active: false,
-      description:
-        "Device-insurance product for a retail chain: a mobile app plus an internal portal where sellers enrol customers straight into the Eva ERP. Next.js server actions hold the ERP API key so it never reaches the browser, quote premiums live as the form is filled, and link policies onto an existing client when the email is already known rather than creating duplicates.",
+      description: 
+        "Device-insurance programme EvaGrupo runs with the K-TUIN retail chain: sellers enrol customers in-store and policies land in the ERP. I built the partner side of the ERP: a K-TUIN-branded CRM scoped to the partner, an Eva Protect sales dashboard for partner staff, per-product partner ownership, consent-based lead matching, and a partner API for lead comments and scheduling.",
       technologies: [
+        "NestJS",
         "Next.js",
-        "React",
         "TypeScript",
-        "Server Actions",
-        "REST API",
+        "Drizzle ORM",
+        "PostgreSQL",
       ],
       links: [
         {
