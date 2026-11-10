@@ -14,17 +14,18 @@ const bare = (url: string) => url.replace(/^https?:\/\/(www\.)?/, "").replace(/\
 
 /** Live products a recruiter can open, in the order they're most worth a click. */
 const PRODUCTS = [
+  { name: "Ivaluna", note: "App Store", href: "https://apps.apple.com/app/id6823245402" },
   { name: "Brainfast", note: "AI support agents", href: "https://brainfast.ai" },
-  { name: "Clipaf", note: "autonomous social content", href: "https://clipaf.com" },
-  { name: "Bijiao", note: "insurance & tech super-app", href: "https://www.bijiao.app" },
+  { name: "Clipaf", note: "social content", href: "https://clipaf.com" },
+  { name: "Bijiao", note: "insurance & tech app", href: "https://www.bijiao.app" },
 ];
 
 /** 42 Network projects that show fundamentals, each with a two-word gloss. */
 const GLOSS: Record<string, string> = {
-  ft_transcendence: "real-time multiplayer web app",
+  ft_transcendence: "multiplayer web app",
   minishell: "Unix shell in C",
-  cub3D: "raycasting engine in C",
-  Inception: "Docker infrastructure",
+  cub3D: "raycaster in C",
+  Inception: "Docker",
 };
 const FUNDAMENTALS = DATA.hackathons.filter((h) => h.title in GLOSS);
 
@@ -123,9 +124,6 @@ export default function CVPage() {
               <span className="text-muted-foreground">({p.note})</span>
             </span>
           ))}
-          <span className="text-muted-foreground"> · </span>
-          <span className="font-medium">Pillow Tales</span>{" "}
-          <span className="text-muted-foreground">(iOS & Android)</span>
         </p>
       </Section>
 

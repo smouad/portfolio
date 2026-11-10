@@ -20,6 +20,7 @@ export function personJsonLd() {
       url: e.href,
     })),
     knowsAbout: DATA.skills.map((s) => s.name),
+    knowsLanguage: DATA.languages,
     sameAs: [DATA.contact.social.GitHub.url, DATA.contact.social.LinkedIn.url],
   };
 }
