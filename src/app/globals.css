@@ -234,3 +234,21 @@
   }
 
 }
+/* Print / "Save as PDF" (used by /cv): always black on white, no page chrome. */
+@media print {
+  @page {
+    size: A4;
+    margin: 14mm 16mm;
+  }
+  :root,
+  .dark {
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.145 0 0);
+    --muted-foreground: oklch(0.4 0 0);
+    --border: oklch(0.88 0 0);
+  }
+  html,
+  body {
+    background: white !important;
+  }
+}

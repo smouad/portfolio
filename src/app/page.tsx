@@ -9,13 +9,20 @@ import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, FileText, Mail, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Icons } from "@/components/icons";
+import { personJsonLd } from "@/lib/json-ld";
 
 const BLUR_FADE_DELAY = 0.04;
 
 export default function Page() {
   return (
     <main className="min-h-dvh flex flex-col gap-14 relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd()) }}
+      />
       <section id="hero">
         <div className="mx-auto w-full max-w-2xl space-y-8">
           <div className="gap-2 gap-y-6 flex flex-col md:flex-row justify-between">
@@ -31,6 +38,45 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 text={DATA.description}
               />
+              <BlurFade delay={BLUR_FADE_DELAY * 2}>
+                <div className="mt-3 flex flex-col gap-4">
+                  <a
+                    href={DATA.locationLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex w-fit items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  >
+                    <MapPin className="size-3.5" aria-hidden />
+                    {DATA.location} · Remote
+                  </a>
+                  <div className="flex flex-wrap gap-2">
+                    <Button asChild size="sm" className="rounded-full gap-1.5 px-4">
+                      <a href={`mailto:${DATA.contact.email}`}>
+                        <Mail className="size-3.5" aria-hidden />
+                        Email me
+                      </a>
+                    </Button>
+                    <Button asChild size="sm" variant="outline" className="rounded-full gap-1.5 px-4">
+                      <Link href="/cv">
+                        <FileText className="size-3.5" aria-hidden />
+                        CV
+                      </Link>
+                    </Button>
+                    <Button asChild size="sm" variant="outline" className="rounded-full gap-1.5 px-4">
+                      <a href={DATA.contact.social.GitHub.url} target="_blank" rel="noopener noreferrer">
+                        <Icons.github className="size-3.5" aria-hidden />
+                        GitHub
+                      </a>
+                    </Button>
+                    <Button asChild size="sm" variant="outline" className="rounded-full gap-1.5 px-4">
+                      <a href={DATA.contact.social.LinkedIn.url} target="_blank" rel="noopener noreferrer">
+                        <Icons.linkedin className="size-3.5" aria-hidden />
+                        LinkedIn
+                      </a>
+                    </Button>
+                  </div>
+                </div>
+              </BlurFade>
             </div>
             <BlurFade delay={BLUR_FADE_DELAY} className="order-1 md:order-2">
               <Avatar className="size-24 md:size-32 border rounded-full shadow-lg ring-4 ring-muted">

@@ -1,7 +1,7 @@
 import { Icons } from "@/components/icons";
 import {
   HomeIcon,
-  NotebookIcon,
+  FileText,
   Sparkles,
   Bot,
   Network,
@@ -51,10 +51,11 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
+    { href: "/cv", icon: FileText, label: "CV" },
     // Blog is wired up and ready — add .mdx files to content/ and re-enable this.
     // Worth doing: a writeup of Brainfast's multi-tenant RAG architecture is the
     // kind of thing that proves depth to a hiring manager faster than a repo link.
-    // { href: "/blog", icon: NotebookIcon, label: "Blog" },
+    // { href: "/blog", icon: NotebookIcon, label: "Blog" }, (import NotebookIcon)
   ],
   contact: {
     email: "sodormouad@gmail.com",
@@ -95,9 +96,6 @@ export const DATA = {
       logoUrl: "/evagrupo.png",
       start: "Jul 2024",
       end: "Present",
-      // ?? Did you build the original Django version, or inherit it? Did you lead the
-      // migration? "Migrated a production Django ERP to Next.js/Node" is a senior-level
-      // line — tell me which is true and I'll sharpen this.
       description:
         "Joined as a Backend Developer and moved into a Software Engineer role after four months. Build and maintain a multi-tenant ERP for insurance and fintech operations, originally built on Python/Django and since evolved onto a Next.js and Node/PostgreSQL stack. Shipped per-product partner ownership, multi-supervisor CRM assignment, scheduled-call workflows, and a product image pipeline. Also maintain seven branded sub-apps sharing one design system and API layer.",
     },
@@ -111,7 +109,7 @@ export const DATA = {
       start: "Jun 2025",
       end: "Present",
       description:
-        "Co-founded Motkan Labs and lead engineering across its products. Brainfast is a multi-tenant AI chatbot platform: Bun + Hono API, BullMQ workers, Drizzle/PostgreSQL, and per-tenant Qdrant collections for semantic search, with Gemini Live voice calls, Stripe usage metering, and an embeddable Shadow-DOM widget. Clipaf turns a story prompt into a finished short-form video, backed by an AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and exponential-backoff retries — fanning generation across horizontally scaled workers. Pillow Tales is a React Native bedtime-story app on iOS and Android, with Convex real-time sync, a parental gate, and subscription entitlements. Also built the multi-domain Motkan site serving three brands from one Next.js app.",
+        "Co-founded Motkan Labs and lead engineering across its products. Brainfast is a multi-tenant AI chatbot platform: Bun + Hono API, BullMQ workers, Drizzle/PostgreSQL, and per-tenant Qdrant collections for semantic search, with Gemini Live voice calls, Stripe usage metering, and an embeddable Shadow-DOM widget. Clipaf turns a story prompt into a finished short-form video, backed by an AI Queue microservice — a Hono + BullMQ job system with a typed SDK, webhook callbacks, and exponential-backoff retries — fanning generation across horizontally scaled workers. Pillow Tales is a React Native bedtime-story app on iOS and Android, with Convex real-time sync, a parental gate, and subscription entitlements.",
     },
     {
       company: "Freelance",

@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { paginate, normalizePage } from "@/lib/pagination";
 import { ChevronRight } from "lucide-react";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -30,6 +31,8 @@ export default async function BlogPage({
   const { page: pageParam } = await searchParams;
 
   const posts = allPosts;
+  // The blog is hidden from the nav until there are posts; don't serve an empty page.
+  if (posts.length === 0) notFound();
   const sortedPosts = [...posts].sort((a, b) => {
     if (new Date(a.publishedAt) > new Date(b.publishedAt)) {
       return -1;
